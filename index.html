@@ -3,24 +3,332 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Ban Giáo Lý Thiếu Nhi Inhaxio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f6f8fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* HEADER */
+        header {
+            background: #ffffff;
+            border-bottom: 1px solid #ddd;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: #264d73;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin-left: 22px;
+            font-weight: 500;
+        }
+
+        nav a:hover {
+            color: #264d73;
+        }
+
+        /* HERO */
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: linear-gradient(
+                rgba(38, 77, 115, 0.88),
+                rgba(38, 77, 115, 0.88)
+            );
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            font-size: 20px;
+        }
+
+        /* SECTION */
+        section {
+            padding: 65px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 30px;
+            color: #264d73;
+        }
+
+        .section-title p {
+            margin-top: 8px;
+            color: #666;
+        }
+
+        /* CLASS CARDS */
+        .classes {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .class-card {
+            background: white;
+            border-radius: 12px;
+            padding: 35px 25px;
+            text-align: center;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .class-card h3 {
+            color: #264d73;
+            margin-bottom: 12px;
+            font-size: 22px;
+        }
+
+        /* INFO */
+        .information {
+            background: white;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .info-box {
+            background: #f6f8fb;
+            border-radius: 12px;
+            padding: 30px;
+        }
+
+        .info-box h3 {
+            color: #264d73;
+            margin-bottom: 15px;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #23384d;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+
+        /* MOBILE */
+        @media (max-width: 800px) {
+            header {
+                display: block;
+                text-align: center;
+            }
+
+            nav {
+                margin-top: 15px;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 6px 8px;
+            }
+
+            .hero {
+                padding: 70px 20px;
+            }
+
+            .hero h1 {
+                font-size: 30px;
+            }
+
+            .classes {
+                grid-template-columns: 1fr;
+            }
+
+            .info-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>Ban Giáo Lý Thiếu Nhi Inhaxio</h1>
 
-    <p>Chào mừng đến với website của Ban Giáo Lý Thiếu Nhi Inhaxio.</p>
+    <!-- HEADER -->
+    <header>
 
-    <h2>Các lớp Giáo lý</h2>
+        <div class="logo">
+            ⛪ Giáo Lý Inhaxio
+        </div>
 
-    <ul>
-        <li>Lớp Chiên Con</li>
-        <li>Lớp Ấu Nhi</li>
-        <li>Lớp Thiếu Nhi - Thêm Sức</li>
-    </ul>
+        <nav>
+            <a href="#home">Trang chủ</a>
+            <a href="#about">Giới thiệu</a>
+            <a href="#classes">Các lớp</a>
+            <a href="#news">Thông báo</a>
+            <a href="#events">Sự kiện</a>
+            <a href="#contact">Liên hệ</a>
+        </nav>
 
-    <h2>Thông báo</h2>
+    </header>
 
-    <p>Website đang trong quá trình xây dựng.</p>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+
+        <h1>Ban Giáo Lý Thiếu Nhi Inhaxio</h1>
+
+        <p>
+            Đồng hành cùng các em thiếu nhi trong hành trình Đức Tin
+        </p>
+
+    </section>
+
+
+    <!-- GIỚI THIỆU -->
+    <section id="about">
+
+        <div class="section-title">
+
+            <h2>Giới thiệu</h2>
+
+            <p>
+                Ban Giáo Lý Thiếu Nhi Inhaxio
+            </p>
+
+        </div>
+
+        <p style="max-width: 800px; margin: auto; text-align: center;">
+            Ban Giáo Lý Thiếu Nhi là nơi đồng hành cùng các em
+            trong việc học hỏi Giáo lý, tìm hiểu Kinh Thánh,
+            tham gia sinh hoạt và cùng nhau lớn lên trong Đức Tin.
+        </p>
+
+    </section>
+
+
+    <!-- CÁC LỚP -->
+    <section id="classes">
+
+        <div class="section-title">
+
+            <h2>Các lớp Giáo lý</h2>
+
+            <p>
+                Chương trình Giáo lý dành cho từng độ tuổi
+            </p>
+
+        </div>
+
+        <div class="classes">
+
+            <div class="class-card">
+
+                <h3>🐑 Lớp Chiên Con</h3>
+
+                <p>
+                    Làm quen với đời sống Đức Tin,
+                    cầu nguyện và những bài Giáo lý căn bản.
+                </p>
+
+            </div>
+
+
+            <div class="class-card">
+
+                <h3>🌱 Lớp Ấu Nhi</h3>
+
+                <p>
+                    Học hỏi Giáo lý, Kinh Thánh và
+                    chuẩn bị lãnh nhận các Bí tích.
+                </p>
+
+            </div>
+
+
+            <div class="class-card">
+
+                <h3>🔥 Lớp Thiếu Nhi</h3>
+
+                <p>
+                    Tiếp tục đào sâu Giáo lý,
+                    Kinh Thánh và chuẩn bị lãnh nhận Bí tích Thêm Sức.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- THÔNG TIN -->
+    <section class="information">
+
+        <div class="info-grid">
+
+            <div class="info-box" id="news">
+
+                <h3>📢 Thông báo mới</h3>
+
+                <p>
+                    Các thông báo mới của Ban Giáo Lý
+                    sẽ được cập nhật tại đây.
+                </p>
+
+            </div>
+
+
+            <div class="info-box" id="events">
+
+                <h3>📅 Sự kiện sắp tới</h3>
+
+                <p>
+                    Các chương trình, sinh hoạt và sự kiện
+                    của Ban Giáo Lý sẽ được cập nhật tại đây.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer id="contact">
+
+        <p>
+            Ban Giáo Lý Thiếu Nhi Inhaxio
+        </p>
+
+        <p>
+            Website đang trong quá trình xây dựng
+        </p>
+
+    </footer>
+
 </body>
 </html>
