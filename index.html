@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Website Ban Giáo Lý Thiếu Nhi Inhaxio - Tổng Giáo Phận Tokyo">
+    <meta name="description"
+          content="Website Ban Giáo Lý Thiếu Nhi Inhaxio - Tổng Giáo Phận Tokyo">
 
     <title>Giáo Lý Thiếu Nhi Inhaxio</title>
 
@@ -21,7 +22,10 @@
         <div class="container header-inner">
 
             <a class="brand" href="#home">
-                <img src="logo-inhaxio.JPG" alt="Logo Giáo Lý Thiếu Nhi Inhaxio" class="brand-logo">
+                <img
+                    src="logo-inhaxio.JPG"
+                    alt="Logo Giáo Lý Thiếu Nhi Inhaxio"
+                    class="brand-logo">
 
                 <span class="brand-name">
                     Giáo Lý Inhaxio
@@ -43,14 +47,20 @@
 
 
     <!-- =========================================================
-         HERO
+         NỘI DUNG CHÍNH
     ========================================================== -->
     <main>
 
+        <!-- =====================================================
+             HERO
+        ====================================================== -->
         <section class="hero" id="home">
             <div class="container hero-content">
 
-                <img src="logo-inhaxio.JPG" alt="Logo Ban Giáo Lý Thiếu Nhi Inhaxio" class="hero-logo">
+                <img
+                    src="logo-inhaxio.JPG"
+                    alt="Logo Ban Giáo Lý Thiếu Nhi Inhaxio"
+                    class="hero-logo">
 
                 <h1>
                     Ban Giáo Lý Thiếu Nhi Inhaxio
@@ -61,6 +71,7 @@
                 </p>
 
                 <div class="hero-actions">
+
                     <a class="button button-light" href="#classes">
                         Xem các lớp Giáo lý
                     </a>
@@ -68,6 +79,7 @@
                     <a class="button button-outline-light" href="#register">
                         Đăng ký tham gia
                     </a>
+
                 </div>
 
             </div>
@@ -81,7 +93,10 @@
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="eyebrow">GIÁO LÝ THIẾU NHI</span>
+
+                    <span class="eyebrow">
+                        GIÁO LÝ THIẾU NHI
+                    </span>
 
                     <h2>
                         Giới thiệu
@@ -90,15 +105,19 @@
                     <p>
                         Ban Giáo Lý Thiếu Nhi Inhaxio
                     </p>
+
                 </div>
 
+
                 <div class="about-card">
+
                     <p>
                         Ban Giáo Lý Thiếu Nhi là nơi đồng hành cùng các em
                         trong việc học hỏi Giáo lý, tìm hiểu Kinh Thánh,
                         tham gia sinh hoạt và cùng nhau trưởng thành
                         trong đời sống Đức Tin.
                     </p>
+
                 </div>
 
             </div>
@@ -112,7 +131,10 @@
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="eyebrow">CHƯƠNG TRÌNH HỌC</span>
+
+                    <span class="eyebrow">
+                        CHƯƠNG TRÌNH HỌC
+                    </span>
 
                     <h2>
                         Các lớp Giáo lý
@@ -121,17 +143,23 @@
                     <p>
                         Kế hoạch, Giáo án và tài liệu Sinh hoạt của từng lớp
                     </p>
+
                 </div>
 
 
                 <div class="class-grid">
 
-                    <!-- =========================
+
+                    <!-- =========================================
                          LỚP CHIÊN CON
-                    ========================== -->
-                    <article class="class-card clickable-card" role="link" tabindex="0"
+                    ========================================== -->
+                    <article
+                        class="class-card clickable-card"
+                        role="link"
+                        tabindex="0"
+                        aria-label="Mở trang Lớp Chiên Con"
                         onclick="window.location.href='chien-con.html'"
-                        onkeydown="if(event.key === 'Enter') window.location.href='chien-con.html'">
+                        onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='chien-con.html'; }">
 
                         <div class="class-icon" aria-hidden="true">
                             🐑
@@ -146,37 +174,62 @@
                             cầu nguyện và những bài Giáo lý căn bản.
                         </p>
 
+
                         <div class="class-links">
 
-                            <a href="https://docs.google.com/spreadsheets/d/1TBIcZOhGC3f8vCSOYljDCtpSISwxvYtwi4E1pwfVuUY/edit"
-                                target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
+                            <a
+                                href="https://docs.google.com/spreadsheets/d/1TBIcZOhGC3f8vCSOYljDCtpSISwxvYtwi4E1pwfVuUY/edit"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
 
-                                <span>📅</span>
+                                <span aria-hidden="true">📅</span>
                                 <span>Kế hoạch Giáo lý</span>
+
                             </a>
 
-                            <a href="https://drive.google.com/drive/folders/1mZdYIKdlgh3rO6v77OMRa1jwuwBGa08i"
-                                target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
 
-                                <span>📖</span>
+                            <a
+                                href="https://drive.google.com/drive/folders/1mZdYIKdlgh3rO6v77OMRa1jwuwBGa08i"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
+
+                                <span aria-hidden="true">📖</span>
                                 <span>Giáo án</span>
+
                             </a>
 
-                            <a href="https://drive.google.com/drive/folders/1mZdYIKdlgh3rO6v77OMRa1jwuwBGa08i"
-                                target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
 
-                                <span>🎲</span>
+                            <a
+                                href="https://drive.google.com/drive/folders/1mZdYIKdlgh3rO6v77OMRa1jwuwBGa08i"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
+
+                                <span aria-hidden="true">🎲</span>
                                 <span>Tài liệu Sinh hoạt</span>
+
                             </a>
 
                         </div>
+
                     </article>
 
 
-                    <!-- =========================
+                    <!-- =========================================
                          LỚP ẤU NHI
-                    ========================== -->
-                    <article class="class-card">
+                    ========================================== -->
+                    <article
+                        class="class-card clickable-card"
+                        role="link"
+                        tabindex="0"
+                        aria-label="Mở trang Lớp Ấu Nhi"
+                        onclick="window.location.href='au-nhi.html'"
+                        onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='au-nhi.html'; }">
 
                         <div class="class-icon" aria-hidden="true">
                             🌱
@@ -187,41 +240,66 @@
                         </h3>
 
                         <p class="class-description">
-                            Học hỏi Giáo lý, Kinh Thánh và
-                            chuẩn bị lãnh nhận các Bí tích.
+                            Học hỏi Giáo lý, Kinh Thánh
+                            và chuẩn bị lãnh nhận các Bí tích.
                         </p>
+
 
                         <div class="class-links">
 
-                            <a href="https://docs.google.com/spreadsheets/d/12yzKJkrB0ieQURrOddSmhnxcK3JTZgs_cDYWxCJSAxc/edit"
-                                target="_blank" rel="noopener noreferrer">
+                            <a
+                                href="https://docs.google.com/spreadsheets/d/12yzKJkrB0ieQURrOddSmhnxcK3JTZgs_cDYWxCJSAxc/edit"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
 
-                                <span>📅</span>
+                                <span aria-hidden="true">📅</span>
                                 <span>Kế hoạch Giáo lý</span>
+
                             </a>
 
-                            <a href="https://drive.google.com/drive/folders/1br7xLF0zghy7j3fA7uKXOxBe-zczAi4x"
-                                target="_blank" rel="noopener noreferrer">
 
-                                <span>📖</span>
+                            <a
+                                href="https://drive.google.com/drive/folders/1br7xLF0zghy7j3fA7uKXOxBe-zczAi4x"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
+
+                                <span aria-hidden="true">📖</span>
                                 <span>Giáo án</span>
+
                             </a>
 
-                            <a href="https://drive.google.com/drive/folders/1br7xLF0zghy7j3fA7uKXOxBe-zczAi4x"
-                                target="_blank" rel="noopener noreferrer">
 
-                                <span>🎲</span>
+                            <a
+                                href="https://drive.google.com/drive/folders/1br7xLF0zghy7j3fA7uKXOxBe-zczAi4x"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
+
+                                <span aria-hidden="true">🎲</span>
                                 <span>Tài liệu Sinh hoạt</span>
+
                             </a>
 
                         </div>
+
                     </article>
 
 
-                    <!-- =========================
+                    <!-- =========================================
                          LỚP THIẾU NHI - THÊM SỨC
-                    ========================== -->
-                    <article class="class-card">
+                    ========================================== -->
+                    <article
+                        class="class-card clickable-card"
+                        role="link"
+                        tabindex="0"
+                        aria-label="Mở trang Lớp Thiếu Nhi - Thêm Sức"
+                        onclick="window.location.href='thieu-nhi.html'"
+                        onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); window.location.href='thieu-nhi.html'; }">
 
                         <div class="class-icon" aria-hidden="true">
                             🔥
@@ -237,33 +315,54 @@
                             lãnh nhận Bí tích Thêm Sức.
                         </p>
 
+
                         <div class="class-links">
 
-                            <a href="https://docs.google.com/spreadsheets/d/1ZqWnhf_2bJNa2LN-iQzSaBZgQgb11ujQKIG0E-aEugk/edit"
-                                target="_blank" rel="noopener noreferrer">
+                            <a
+                                href="https://docs.google.com/spreadsheets/d/1ZqWnhf_2bJNa2LN-iQzSaBZgQgb11ujQKIG0E-aEugk/edit"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
 
-                                <span>📅</span>
+                                <span aria-hidden="true">📅</span>
                                 <span>Kế hoạch Giáo lý</span>
+
                             </a>
 
-                            <a href="https://drive.google.com/drive/folders/1y-4k5ywKXEDZDuYDzLAyXlDaEbo5vHjw"
-                                target="_blank" rel="noopener noreferrer">
 
-                                <span>📖</span>
+                            <a
+                                href="https://drive.google.com/drive/folders/1y-4k5ywKXEDZDuYDzLAyXlDaEbo5vHjw"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
+
+                                <span aria-hidden="true">📖</span>
                                 <span>Giáo án</span>
+
                             </a>
 
-                            <a href="https://drive.google.com/drive/folders/19icOTeF_5kDESuEs3nwUHrjq2kEfe52x"
-                                target="_blank" rel="noopener noreferrer">
 
-                                <span>🎲</span>
+                            <a
+                                href="https://drive.google.com/drive/folders/19icOTeF_5kDESuEs3nwUHrjq2kEfe52x"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onclick="event.stopPropagation()"
+                                onkeydown="event.stopPropagation()">
+
+                                <span aria-hidden="true">🎲</span>
                                 <span>Tài liệu Sinh hoạt</span>
+
                             </a>
 
                         </div>
+
                     </article>
 
+
                 </div>
+
             </div>
         </section>
 
@@ -276,6 +375,7 @@
 
                 <div class="info-grid">
 
+
                     <article class="info-card" id="news">
 
                         <div class="info-icon" aria-hidden="true">
@@ -283,6 +383,7 @@
                         </div>
 
                         <div>
+
                             <span class="info-label">
                                 THÔNG TIN
                             </span>
@@ -295,6 +396,7 @@
                                 Các thông báo mới của Ban Giáo Lý
                                 sẽ được cập nhật tại đây.
                             </p>
+
                         </div>
 
                     </article>
@@ -307,6 +409,7 @@
                         </div>
 
                         <div>
+
                             <span class="info-label">
                                 SỰ KIỆN
                             </span>
@@ -319,11 +422,14 @@
                                 Các chương trình, sinh hoạt và sự kiện
                                 của Ban Giáo Lý sẽ được cập nhật tại đây.
                             </p>
+
                         </div>
 
                     </article>
 
+
                 </div>
+
             </div>
         </section>
 
@@ -335,6 +441,7 @@
             <div class="container">
 
                 <div class="section-heading">
+
                     <span class="eyebrow">
                         THAM GIA CÙNG CHÚNG MÌNH
                     </span>
@@ -346,10 +453,12 @@
                     <p>
                         Các biểu mẫu đăng ký của Ban Giáo Lý
                     </p>
+
                 </div>
 
 
                 <div class="register-grid">
+
 
                     <article class="register-card">
 
@@ -366,10 +475,14 @@
                             cho các em tham gia lớp Giáo lý Thiếu nhi.
                         </p>
 
-                        <a class="button button-primary" href="https://forms.gle/WBxKHPgf5kwEPByf9" target="_blank"
+                        <a
+                            class="button button-primary"
+                            href="https://forms.gle/WBxKHPgf5kwEPByf9"
+                            target="_blank"
                             rel="noopener noreferrer">
 
                             Mở bản đăng ký
+
                         </a>
 
                     </article>
@@ -390,13 +503,18 @@
                             đồng hành và phục vụ trong Ban Giáo Lý.
                         </p>
 
-                        <a class="button button-primary" href="https://forms.gle/yJYvVLEoirdnnJkR9" target="_blank"
+                        <a
+                            class="button button-primary"
+                            href="https://forms.gle/yJYvVLEoirdnnJkR9"
+                            target="_blank"
                             rel="noopener noreferrer">
 
                             Mở bản đăng ký
+
                         </a>
 
                     </article>
+
 
                 </div>
 
@@ -414,6 +532,7 @@
                     f
                 </div>
 
+
                 <div class="facebook-content">
 
                     <span class="eyebrow">
@@ -430,10 +549,14 @@
                         Nhà thờ Thánh Inhaxio
                     </p>
 
-                    <a class="button facebook-button" href="https://www.facebook.com/groups/3584603501809400"
-                        target="_blank" rel="noopener noreferrer">
+                    <a
+                        class="button facebook-button"
+                        href="https://www.facebook.com/groups/3584603501809400"
+                        target="_blank"
+                        rel="noopener noreferrer">
 
                         Truy cập Facebook
+
                     </a>
 
                 </div>
@@ -448,11 +571,17 @@
          FOOTER
     ========================================================== -->
     <footer class="site-footer">
+
         <div class="container footer-inner">
 
-            <img src="logo-inhaxio.JPG" alt="Logo Giáo Lý Thiếu Nhi Inhaxio" class="footer-logo">
+            <img
+                src="logo-inhaxio.JPG"
+                alt="Logo Giáo Lý Thiếu Nhi Inhaxio"
+                class="footer-logo">
+
 
             <div>
+
                 <p class="footer-title">
                     Ban Giáo Lý Thiếu Nhi Inhaxio
                 </p>
@@ -460,13 +589,16 @@
                 <p class="footer-subtitle">
                     Tổng Giáo Phận Tokyo
                 </p>
+
             </div>
 
         </div>
 
+
         <p class="copyright">
             © 2026 Giáo Lý Thiếu Nhi Inhaxio
         </p>
+
     </footer>
 
 </body>
