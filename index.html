@@ -1,803 +1,507 @@
 <!DOCTYPE html>
 <html lang="vi">
-
 <head>
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Website Ban Giáo Lý Thiếu Nhi Inhaxio - Tổng Giáo Phận Tokyo">
 
     <title>Giáo Lý Thiếu Nhi Inhaxio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            color: #333;
-            background: #f6f8fb;
-            line-height: 1.6;
-        }
-
-
-        /* =========================
-           HEADER
-        ========================= */
-
-        header {
-            background: white;
-            padding: 12px 7%;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            border-bottom: 1px solid #ddd;
-
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-        }
-
-        .brand {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-        }
-
-        .brand img {
-            width: 58px;
-            height: 58px;
-            object-fit: cover;
-            border-radius: 50%;
-        }
-
-        .brand-text {
-            color: #234f78;
-            font-size: 21px;
-            font-weight: bold;
-        }
-
-        nav a {
-            text-decoration: none;
-            color: #333;
-            margin-left: 20px;
-            font-weight: 500;
-        }
-
-        nav a:hover {
-            color: #234f78;
-        }
-
-
-        /* =========================
-           HERO
-        ========================= */
-
-        .hero {
-            background:
-                linear-gradient(rgba(31, 75, 113, 0.90),
-                    rgba(31, 75, 113, 0.90));
-
-            color: white;
-            text-align: center;
-
-            padding: 90px 20px;
-        }
-
-        .hero-logo {
-            width: 150px;
-            height: 150px;
-
-            object-fit: cover;
-
-            border-radius: 50%;
-
-            background: white;
-
-            padding: 5px;
-
-            margin-bottom: 25px;
-        }
-
-        .hero h1 {
-            font-size: 42px;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 20px;
-        }
-
-
-        /* =========================
-           GENERAL SECTION
-        ========================= */
-
-        section {
-            padding: 70px 7%;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        .section-title h2 {
-            color: #234f78;
-            font-size: 32px;
-            margin-bottom: 8px;
-        }
-
-        .section-title p {
-            color: #666;
-        }
-
-
-        /* =========================
-           GIỚI THIỆU
-        ========================= */
-
-        .about-text {
-            max-width: 850px;
-            margin: auto;
-            text-align: center;
-            font-size: 17px;
-        }
-
-
-        /* =========================
-           CÁC LỚP
-        ========================= */
-
-        .classes {
-            display: grid;
-
-            grid-template-columns:
-                repeat(3, 1fr);
-
-            gap: 25px;
-        }
-
-        .class-card {
-            background: white;
-
-            border-radius: 15px;
-
-            padding: 30px;
-
-            box-shadow:
-                0 4px 18px rgba(0, 0, 0, 0.08);
-        }
-
-        .class-card h3 {
-            color: #234f78;
-            text-align: center;
-            font-size: 23px;
-            margin-bottom: 12px;
-        }
-
-        .class-description {
-            text-align: center;
-            margin-bottom: 25px;
-            min-height: 75px;
-        }
-
-
-        /* =========================
-           NÚT TRONG LỚP
-        ========================= */
-
-        .class-links {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-        }
-
-        .class-links a {
-            text-decoration: none;
-
-            padding: 11px 15px;
-
-            border-radius: 8px;
-
-            background: #eef5fb;
-
-            color: #234f78;
-
-            font-weight: bold;
-
-            text-align: center;
-
-            transition: 0.2s;
-        }
-
-        .class-links a:hover {
-            background: #234f78;
-            color: white;
-        }
-
-
-        /* =========================
-           THÔNG TIN
-        ========================= */
-
-        .info-section {
-            background: white;
-        }
-
-        .info-grid {
-            display: grid;
-
-            grid-template-columns:
-                repeat(2, 1fr);
-
-            gap: 25px;
-        }
-
-        .info-box {
-            background: #f2f6fa;
-
-            border-radius: 14px;
-
-            padding: 30px;
-        }
-
-        .info-box h3 {
-            color: #234f78;
-            margin-bottom: 12px;
-        }
-
-
-        /* =========================
-           ĐĂNG KÝ
-        ========================= */
-
-        .register-area {
-            text-align: center;
-        }
-
-        .register-buttons {
-            display: flex;
-
-            justify-content: center;
-
-            gap: 20px;
-
-            flex-wrap: wrap;
-
-            margin-top: 30px;
-        }
-
-        .register-button {
-            text-decoration: none;
-
-            background: #234f78;
-
-            color: white;
-
-            padding: 15px 25px;
-
-            border-radius: 10px;
-
-            font-weight: bold;
-
-            transition: 0.2s;
-        }
-
-        .register-button:hover {
-            transform: translateY(-2px);
-            opacity: 0.9;
-        }
-
-
-        /* =========================
-           FACEBOOK
-        ========================= */
-
-        .facebook-section {
-            background: white;
-            text-align: center;
-        }
-
-        .facebook-button {
-            display: inline-block;
-
-            margin-top: 20px;
-
-            padding: 14px 28px;
-
-            text-decoration: none;
-
-            background: #1877f2;
-
-            color: white;
-
-            border-radius: 10px;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================
-           FOOTER
-        ========================= */
-
-        footer {
-            background: #223b55;
-
-            color: white;
-
-            padding: 40px 20px;
-
-            text-align: center;
-        }
-
-        footer img {
-            width: 80px;
-            height: 80px;
-
-            object-fit: cover;
-
-            border-radius: 50%;
-
-            background: white;
-
-            margin-bottom: 15px;
-        }
-
-
-        /* =========================
-           MOBILE
-        ========================= */
-
-        @media (max-width: 900px) {
-
-            header {
-                display: block;
-                text-align: center;
-            }
-
-            .brand {
-                justify-content: center;
-            }
-
-            nav {
-                margin-top: 15px;
-            }
-
-            nav a {
-                display: inline-block;
-                margin: 6px 8px;
-            }
-
-            .hero h1 {
-                font-size: 30px;
-            }
-
-            .classes {
-                grid-template-columns: 1fr;
-            }
-
-            .info-grid {
-                grid-template-columns: 1fr;
-            }
-
-        }
-    </style>
-
+    <link rel="stylesheet" href="style.css">
 </head>
-
-
 
 <body>
 
+    <!-- =========================================================
+         HEADER
+    ========================================================== -->
+    <header class="site-header">
+        <div class="container header-inner">
 
-    <!-- =========================
-     HEADER
-========================= -->
+            <a class="brand" href="#home">
+                <img
+                    src="logo-inhaxio.JPG"
+                    alt="Logo Giáo Lý Thiếu Nhi Inhaxio"
+                    class="brand-logo">
 
-    <header>
+                <span class="brand-name">
+                    Giáo Lý Inhaxio
+                </span>
+            </a>
 
-        <div class="brand">
-
-            <img src="logo-inhaxio.JPG" alt="Logo Giáo Lý Thiếu Nhi Inhaxio">
-
-            <div class="brand-text">
-                Giáo Lý Inhaxio
-            </div>
+            <nav class="main-nav" aria-label="Điều hướng chính">
+                <a href="#home">Trang chủ</a>
+                <a href="#about">Giới thiệu</a>
+                <a href="#classes">Các lớp</a>
+                <a href="#news">Thông báo</a>
+                <a href="#events">Sự kiện</a>
+                <a href="#register">Đăng ký</a>
+                <a href="#facebook">Facebook</a>
+            </nav>
 
         </div>
-
-
-        <nav>
-
-            <a href="#home">
-                Trang chủ
-            </a>
-
-            <a href="#about">
-                Giới thiệu
-            </a>
-
-            <a href="#classes">
-                Các lớp
-            </a>
-
-            <a href="#news">
-                Thông báo
-            </a>
-
-            <a href="#events">
-                Sự kiện
-            </a>
-
-            <a href="#register">
-                Đăng ký
-            </a>
-
-            <a href="#facebook">
-                Facebook
-            </a>
-
-        </nav>
-
     </header>
 
 
+    <!-- =========================================================
+         HERO
+    ========================================================== -->
+    <main>
 
-    <!-- =========================
-     HERO
-========================= -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
 
-    <section class="hero" id="home">
+                <img
+                    src="logo-inhaxio.JPG"
+                    alt="Logo Ban Giáo Lý Thiếu Nhi Inhaxio"
+                    class="hero-logo">
 
-        <img src="logo-inhaxio.JPG" class="hero-logo" alt="Logo Giáo Lý Thiếu Nhi Inhaxio">
+                <h1>
+                    Ban Giáo Lý Thiếu Nhi Inhaxio
+                </h1>
 
-        <h1>
-            Ban Giáo Lý Thiếu Nhi Inhaxio
-        </h1>
-
-        <p>
-            Đồng hành cùng các em thiếu nhi
-            trong hành trình Đức Tin
-        </p>
-
-    </section>
-
-
-
-    <!-- =========================
-     GIỚI THIỆU
-========================= -->
-
-    <section id="about">
-
-        <div class="section-title">
-
-            <h2>
-                Giới thiệu
-            </h2>
-
-            <p>
-                Ban Giáo Lý Thiếu Nhi Inhaxio
-            </p>
-
-        </div>
-
-
-        <div class="about-text">
-
-            Ban Giáo Lý Thiếu Nhi là nơi
-            đồng hành cùng các em trong việc
-            học hỏi Giáo lý, tìm hiểu Kinh Thánh,
-            tham gia sinh hoạt và cùng nhau
-            trưởng thành trong đời sống Đức Tin.
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-     CÁC LỚP
-========================= -->
-
-    <section id="classes">
-
-        <div class="section-title">
-
-            <h2>
-                Các lớp Giáo lý
-            </h2>
-
-            <p>
-                Chương trình học và tài liệu
-                dành cho từng lớp
-            </p>
-
-        </div>
-
-
-        <div class="classes">
-
-
-            <!-- CHIÊN CON -->
-
-            <div class="class-card">
-
-                <h3>
-                    🐑 Lớp Chiên Con
-                </h3>
-
-                <p class="class-description">
-
-                    Làm quen với đời sống Đức Tin,
-                    cầu nguyện và những bài
-                    Giáo lý căn bản.
-
+                <p class="hero-subtitle">
+                    Đồng hành cùng các em thiếu nhi trong hành trình Đức Tin
                 </p>
 
-
-                <div class="class-links">
-
-                    <a href="#">
-                        📅 Kế hoạch Giáo lý
+                <div class="hero-actions">
+                    <a class="button button-light" href="#classes">
+                        Xem các lớp Giáo lý
                     </a>
 
-                    <a href="#">
-                        📖 Giáo án
+                    <a class="button button-outline-light" href="#register">
+                        Đăng ký tham gia
                     </a>
+                </div>
 
-                    <a href="#">
-                        🎲 Tài liệu Sinh hoạt
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             GIỚI THIỆU
+        ====================================================== -->
+        <section class="section" id="about">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">GIÁO LÝ THIẾU NHI</span>
+
+                    <h2>
+                        Giới thiệu
+                    </h2>
+
+                    <p>
+                        Ban Giáo Lý Thiếu Nhi Inhaxio
+                    </p>
+                </div>
+
+                <div class="about-card">
+                    <p>
+                        Ban Giáo Lý Thiếu Nhi là nơi đồng hành cùng các em
+                        trong việc học hỏi Giáo lý, tìm hiểu Kinh Thánh,
+                        tham gia sinh hoạt và cùng nhau trưởng thành
+                        trong đời sống Đức Tin.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             CÁC LỚP GIÁO LÝ
+        ====================================================== -->
+        <section class="section section-soft" id="classes">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">CHƯƠNG TRÌNH HỌC</span>
+
+                    <h2>
+                        Các lớp Giáo lý
+                    </h2>
+
+                    <p>
+                        Kế hoạch, Giáo án và tài liệu Sinh hoạt của từng lớp
+                    </p>
+                </div>
+
+
+                <div class="class-grid">
+
+                    <!-- =========================
+                         LỚP CHIÊN CON
+                    ========================== -->
+                    <article class="class-card">
+
+                        <div class="class-icon" aria-hidden="true">
+                            🐑
+                        </div>
+
+                        <h3>
+                            Lớp Chiên Con
+                        </h3>
+
+                        <p class="class-description">
+                            Làm quen với đời sống Đức Tin,
+                            cầu nguyện và những bài Giáo lý căn bản.
+                        </p>
+
+                        <div class="class-links">
+
+                            <a
+                                href="https://docs.google.com/spreadsheets/d/1TBIcZOhGC3f8vCSOYljDCtpSISwxvYtwi4E1pwfVuUY/edit"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>📅</span>
+                                <span>Kế hoạch Giáo lý</span>
+                            </a>
+
+                            <a
+                                href="https://drive.google.com/drive/folders/1mZdYIKdlgh3rO6v77OMRa1jwuwBGa08i"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>📖</span>
+                                <span>Giáo án</span>
+                            </a>
+
+                            <a
+                                href="https://drive.google.com/drive/folders/1mZdYIKdlgh3rO6v77OMRa1jwuwBGa08i"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>🎲</span>
+                                <span>Tài liệu Sinh hoạt</span>
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- =========================
+                         LỚP ẤU NHI
+                    ========================== -->
+                    <article class="class-card">
+
+                        <div class="class-icon" aria-hidden="true">
+                            🌱
+                        </div>
+
+                        <h3>
+                            Lớp Ấu Nhi
+                        </h3>
+
+                        <p class="class-description">
+                            Học hỏi Giáo lý, Kinh Thánh và
+                            chuẩn bị lãnh nhận các Bí tích.
+                        </p>
+
+                        <div class="class-links">
+
+                            <a
+                                href="https://docs.google.com/spreadsheets/d/12yzKJkrB0ieQURrOddSmhnxcK3JTZgs_cDYWxCJSAxc/edit"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>📅</span>
+                                <span>Kế hoạch Giáo lý</span>
+                            </a>
+
+                            <a
+                                href="https://drive.google.com/drive/folders/1br7xLF0zghy7j3fA7uKXOxBe-zczAi4x"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>📖</span>
+                                <span>Giáo án</span>
+                            </a>
+
+                            <a
+                                href="https://drive.google.com/drive/folders/1br7xLF0zghy7j3fA7uKXOxBe-zczAi4x"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>🎲</span>
+                                <span>Tài liệu Sinh hoạt</span>
+                            </a>
+
+                        </div>
+                    </article>
+
+
+                    <!-- =========================
+                         LỚP THIẾU NHI - THÊM SỨC
+                    ========================== -->
+                    <article class="class-card">
+
+                        <div class="class-icon" aria-hidden="true">
+                            🔥
+                        </div>
+
+                        <h3>
+                            Lớp Thiếu Nhi - Thêm Sức
+                        </h3>
+
+                        <p class="class-description">
+                            Tiếp tục đào sâu Giáo lý,
+                            Kinh Thánh và chuẩn bị
+                            lãnh nhận Bí tích Thêm Sức.
+                        </p>
+
+                        <div class="class-links">
+
+                            <a
+                                href="https://docs.google.com/spreadsheets/d/1ZqWnhf_2bJNa2LN-iQzSaBZgQgb11ujQKIG0E-aEugk/edit"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>📅</span>
+                                <span>Kế hoạch Giáo lý</span>
+                            </a>
+
+                            <a
+                                href="https://drive.google.com/drive/folders/1y-4k5ywKXEDZDuYDzLAyXlDaEbo5vHjw"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>📖</span>
+                                <span>Giáo án</span>
+                            </a>
+
+                            <a
+                                href="https://drive.google.com/drive/folders/19icOTeF_5kDESuEs3nwUHrjq2kEfe52x"
+                                target="_blank"
+                                rel="noopener noreferrer">
+
+                                <span>🎲</span>
+                                <span>Tài liệu Sinh hoạt</span>
+                            </a>
+
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             THÔNG BÁO + SỰ KIỆN
+        ====================================================== -->
+        <section class="section" id="information">
+            <div class="container">
+
+                <div class="info-grid">
+
+                    <article class="info-card" id="news">
+
+                        <div class="info-icon" aria-hidden="true">
+                            📢
+                        </div>
+
+                        <div>
+                            <span class="info-label">
+                                THÔNG TIN
+                            </span>
+
+                            <h2>
+                                Thông báo mới
+                            </h2>
+
+                            <p>
+                                Các thông báo mới của Ban Giáo Lý
+                                sẽ được cập nhật tại đây.
+                            </p>
+                        </div>
+
+                    </article>
+
+
+                    <article class="info-card" id="events">
+
+                        <div class="info-icon" aria-hidden="true">
+                            📅
+                        </div>
+
+                        <div>
+                            <span class="info-label">
+                                SỰ KIỆN
+                            </span>
+
+                            <h2>
+                                Sự kiện sắp tới
+                            </h2>
+
+                            <p>
+                                Các chương trình, sinh hoạt và sự kiện
+                                của Ban Giáo Lý sẽ được cập nhật tại đây.
+                            </p>
+                        </div>
+
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             ĐĂNG KÝ
+        ====================================================== -->
+        <section class="section section-soft" id="register">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">
+                        THAM GIA CÙNG CHÚNG MÌNH
+                    </span>
+
+                    <h2>
+                        Đăng ký
+                    </h2>
+
+                    <p>
+                        Các biểu mẫu đăng ký của Ban Giáo Lý
+                    </p>
+                </div>
+
+
+                <div class="register-grid">
+
+                    <article class="register-card">
+
+                        <div class="register-icon" aria-hidden="true">
+                            📝
+                        </div>
+
+                        <h3>
+                            Đăng ký học Giáo lý
+                        </h3>
+
+                        <p>
+                            Dành cho phụ huynh đăng ký
+                            cho các em tham gia lớp Giáo lý Thiếu nhi.
+                        </p>
+
+                        <a
+                            class="button button-primary"
+                            href="https://forms.gle/WBxKHPgf5kwEPByf9"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Mở bản đăng ký
+                        </a>
+
+                    </article>
+
+
+                    <article class="register-card">
+
+                        <div class="register-icon" aria-hidden="true">
+                            🙋
+                        </div>
+
+                        <h3>
+                            Đăng ký Huynh trưởng - Giáo lý viên
+                        </h3>
+
+                        <p>
+                            Dành cho những anh chị mong muốn
+                            đồng hành và phục vụ trong Ban Giáo Lý.
+                        </p>
+
+                        <a
+                            class="button button-primary"
+                            href="https://forms.gle/yJYvVLEoirdnnJkR9"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            Mở bản đăng ký
+                        </a>
+
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- =====================================================
+             FACEBOOK
+        ====================================================== -->
+        <section class="section facebook-section" id="facebook">
+            <div class="container facebook-inner">
+
+                <div class="facebook-mark" aria-hidden="true">
+                    f
+                </div>
+
+                <div class="facebook-content">
+
+                    <span class="eyebrow">
+                        KẾT NỐI
+                    </span>
+
+                    <h2>
+                        Facebook Giáo Lý Thiếu Nhi
+                    </h2>
+
+                    <p>
+                        GIÁO LÝ THIẾU NHI
+                        <br>
+                        Nhà thờ Thánh Inhaxio
+                    </p>
+
+                    <a
+                        class="button facebook-button"
+                        href="https://www.facebook.com/groups/3584603501809400"
+                        target="_blank"
+                        rel="noopener noreferrer">
+
+                        Truy cập Facebook
                     </a>
 
                 </div>
 
             </div>
+        </section>
+
+    </main>
 
 
+    <!-- =========================================================
+         FOOTER
+    ========================================================== -->
+    <footer class="site-footer">
+        <div class="container footer-inner">
 
-            <!-- ẤU NHI -->
+            <img
+                src="logo-inhaxio.JPG"
+                alt="Logo Giáo Lý Thiếu Nhi Inhaxio"
+                class="footer-logo">
 
-            <div class="class-card">
-
-                <h3>
-                    🌱 Lớp Ấu Nhi
-                </h3>
-
-                <p class="class-description">
-
-                    Học hỏi Giáo lý,
-                    Kinh Thánh và chuẩn bị
-                    lãnh nhận các Bí tích.
-
+            <div>
+                <p class="footer-title">
+                    Ban Giáo Lý Thiếu Nhi Inhaxio
                 </p>
 
-
-                <div class="class-links">
-
-                    <a href="#">
-                        📅 Kế hoạch Giáo lý
-                    </a>
-
-                    <a href="#">
-                        📖 Giáo án
-                    </a>
-
-                    <a href="#">
-                        🎲 Tài liệu Sinh hoạt
-                    </a>
-
-                </div>
-
-            </div>
-
-
-
-            <!-- THIẾU NHI -->
-
-            <div class="class-card">
-
-                <h3>
-                    🔥 Lớp Thiếu Nhi
-                </h3>
-
-                <p class="class-description">
-
-                    Tiếp tục đào sâu Giáo lý,
-                    Kinh Thánh và chuẩn bị
-                    lãnh nhận Bí tích Thêm Sức.
-
+                <p class="footer-subtitle">
+                    Tổng Giáo Phận Tokyo
                 </p>
-
-
-                <div class="class-links">
-
-                    <a href="#">
-                        📅 Kế hoạch Giáo lý
-                    </a>
-
-                    <a href="#">
-                        📖 Giáo án
-                    </a>
-
-                    <a href="#">
-                        🎲 Tài liệu Sinh hoạt
-                    </a>
-
-                </div>
-
             </div>
 
-
         </div>
 
-    </section>
-
-
-
-    <!-- =========================
-     THÔNG BÁO + SỰ KIỆN
-========================= -->
-
-    <section class="info-section">
-
-        <div class="info-grid">
-
-
-            <div class="info-box" id="news">
-
-                <h3>
-                    📢 Thông báo mới
-                </h3>
-
-                <p>
-                    Các thông báo mới của
-                    Ban Giáo Lý sẽ được
-                    cập nhật tại đây.
-                </p>
-
-            </div>
-
-
-            <div class="info-box" id="events">
-
-                <h3>
-                    📅 Sự kiện sắp tới
-                </h3>
-
-                <p>
-                    Các chương trình và
-                    sự kiện của Ban Giáo Lý
-                    sẽ được cập nhật tại đây.
-                </p>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-     ĐĂNG KÝ
-========================= -->
-
-    <section class="register-area" id="register">
-
-
-        <div class="section-title">
-
-            <h2>
-                Đăng ký
-            </h2>
-
-            <p>
-                Các biểu mẫu đăng ký
-                của Ban Giáo Lý
-            </p>
-
-        </div>
-
-
-        <div class="register-buttons">
-
-
-            <a class="register-button" href="https://forms.gle/WBxKHPgf5kwEPByf9" target="_blank">
-
-                📝 Đăng ký học Giáo lý
-
-            </a>
-
-
-            <a class="register-button" href="https://forms.gle/yJYvVLEoirdnnJkR9" target="_blank">
-
-                🙋 Đăng ký Huynh trưởng - Giáo lý viên
-
-            </a>
-
-
-        </div>
-
-    </section>
-
-
-
-    <!-- =========================
-     FACEBOOK
-========================= -->
-
-    <section class="facebook-section" id="facebook">
-
-
-        <div class="section-title">
-
-            <h2>
-                Facebook
-            </h2>
-
-            <p>
-                Theo dõi hoạt động
-                của Ban Giáo Lý
-            </p>
-
-        </div>
-
-
-        <p>
-
-            GIÁO LÝ THIẾU NHI
-            <br>
-
-            Nhà thờ Thánh Inhaxio
-
+        <p class="copyright">
+            © 2026 Giáo Lý Thiếu Nhi Inhaxio
         </p>
-
-
-        <a class="facebook-button" href="https://www.facebook.com/groups/3584603501809400" target="_blank">
-
-            Facebook Ban Giáo Lý
-
-        </a>
-
-
-    </section>
-
-
-
-    <!-- =========================
-     FOOTER
-========================= -->
-
-    <footer>
-
-        <img src="logo-inhaxio.JPG" alt="Logo Giáo Lý Inhaxio">
-
-
-        <p>
-            <strong>
-                Ban Giáo Lý Thiếu Nhi Inhaxio
-            </strong>
-        </p>
-
-
-        <p>
-            Tokyo, Nhật Bản
-        </p>
-
     </footer>
 
-
 </body>
-
 </html>
