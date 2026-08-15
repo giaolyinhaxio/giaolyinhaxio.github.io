@@ -1043,3 +1043,17 @@ a {
     }
 
 }
+
+.clickable-card {
+    cursor: pointer;
+}
+
+.clickable-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 20px 42px rgba(24, 56, 84, 0.16);
+}
+
+.clickable-card:focus {
+    outline: 3px solid rgba(46, 98, 142, 0.35);
+    outline-offset: 4px;
+}

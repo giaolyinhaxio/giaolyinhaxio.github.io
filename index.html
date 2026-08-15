@@ -129,7 +129,9 @@
                     <!-- =========================
                          LỚP CHIÊN CON
                     ========================== -->
-                    <article class="class-card">
+                    <article class="class-card clickable-card" role="link" tabindex="0"
+                        onclick="window.location.href='chien-con.html'"
+                        onkeydown="if(event.key === 'Enter') window.location.href='chien-con.html'">
 
                         <div class="class-icon" aria-hidden="true">
                             🐑
@@ -147,33 +149,27 @@
                         <div class="class-links">
 
                             <a href="https://docs.google.com/spreadsheets/d/1TBIcZOhGC3f8vCSOYljDCtpSISwxvYtwi4E1pwfVuUY/edit"
-                                target="_blank" rel="noopener noreferrer">
+                                target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
 
                                 <span>📅</span>
                                 <span>Kế hoạch Giáo lý</span>
                             </a>
 
                             <a href="https://drive.google.com/drive/folders/1mZdYIKdlgh3rO6v77OMRa1jwuwBGa08i"
-                                target="_blank" rel="noopener noreferrer">
+                                target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
 
                                 <span>📖</span>
                                 <span>Giáo án</span>
                             </a>
 
                             <a href="https://drive.google.com/drive/folders/1mZdYIKdlgh3rO6v77OMRa1jwuwBGa08i"
-                                target="_blank" rel="noopener noreferrer">
+                                target="_blank" rel="noopener noreferrer" onclick="event.stopPropagation()">
 
                                 <span>🎲</span>
                                 <span>Tài liệu Sinh hoạt</span>
                             </a>
 
                         </div>
-
-                        <a class="button button-primary class-page-button" href="chien-con.html">
-
-                            Xem trang lớp →
-
-                        </a>
                     </article>
 
 
